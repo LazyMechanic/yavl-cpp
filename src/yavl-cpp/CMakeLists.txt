@@ -38,9 +38,10 @@ set_target_properties(
 
 # Set include directories for this project and if it will use as installing
 target_include_directories(
-    yavl-cpp INTERFACE
-    $<BUILD_INTERFACE:${_PROJECT_SRC_DIR}>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/yavl-cpp>)
+    yavl-cpp
+    PRIVATE $<BUILD_INTERFACE:${_PROJECT_SRC_DIR}/yavl-cpp>
+    PUBLIC $<INSTALL_INTERFACE:include>
+           $<BUILD_INTERFACE:${_PROJECT_ROOT_DIR}/include>)
 
 # Find Protobuf
 find_package(yaml-cpp CONFIG REQUIRED)

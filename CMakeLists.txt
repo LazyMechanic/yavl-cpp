@@ -24,4 +24,4 @@ string(TOLOWER "${CMAKE_BUILD_TYPE}" _PROJECT_BUILD_TYPE)
 set(_PROJECT_ROOT_DIR "${CMAKE_SOURCE_DIR}")
 set(_PROJECT_SRC_DIR "${_PROJECT_ROOT_DIR}/src")
 
-add_subdirectory(src)
+add_subdirectory(src/yavl-cpp)
