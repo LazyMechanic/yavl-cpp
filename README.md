@@ -21,16 +21,26 @@ $ cd build/
 
 Make `yavl-cpp`:
 ```bash
-$ cmake 
-    # Debug or release build. Release by default
+$ cmake                                \
     -DCMAKE_BUILD_TYPE=[Debug|Release] \ 
-    # Make generator
     -G "MinGW Makefiles"               \
-    -Dyaml-cpp_DIR=/path/to/yaml-cpp   \
     ..
 ```
 
-# CMake configuration flags
+For build by `MSVC` you need use Visual Studio Prompt:
+```bash
+$ cmake                                \
+    -DCMAKE_BUILD_TYPE=[Debug|Release] \ 
+    -G "NMake Makefiles"               \
+    ..
+```
+
+# CMake options
+If `yaml-cpp` installed into specific directory then set:
+```bash
+-Dyaml-cpp_DIR=<root_dir_yaml-cpp>/cmake
+```
+
 Generate specific project, for example `Visual Studio solution` generator:
 ```bash
 -G "Visual Studio 16"
