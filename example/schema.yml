@@ -1,4 +1,4 @@
-# spec to check y0.gr3.yaml
+---
 map:
   HEADER:
     map:
@@ -11,3 +11,4 @@ map:
             list: [string: ]
           b:
             list: [uint64: ]
+...

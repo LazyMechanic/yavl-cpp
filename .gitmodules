@@ -1,0 +1,3 @@
+[submodule "cmake/modules/CMakeBuildHelper"]
+	path = cmake/modules/CMakeBuildHelper
+	url = https://github.com/LazyMechanic/CMakeBuildHelper
